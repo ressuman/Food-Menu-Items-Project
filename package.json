@@ -1,0 +1,19 @@
+{
+  "name": "personal-project-24-typescript-food-items-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/*.html"
+}
