@@ -1,10 +1,11 @@
-# DevCamper API
+# Pizza Menu Items List
 
-> Backend API for DevCamper application, which is a bootcamp directory website
+> A simple application to create and manage a list of pizza menu items using a form with fields for title, description, toppings, and price.
 
-## Usage
+## Features
 
-Open the "index.html" file in the public folder via live server- by doing so you can have a preview of all the routes used in this application and use as such. eg: api/v1/bootcamps, api/v1/users
+- Add Pizza Items: Add new pizza items with a title, description, toppings, and price.
+- View Pizza List: View the complete list of pizza items.
 
 ## Install Dependencies
 
@@ -24,20 +25,9 @@ npm run dev
 npm start
 ```
 
-### Database Seeder
-
-To seed the database with users, bootcamps, courses and reviews with data from the "\_data" folder, run
-
-### Destroy all data
-
-node seeder -d
-
-### Import all data
-
-node seeder -i
-
 - Version: 1.0.0
 - License: MIT
 
-Here is an expected gif of the preview of routes of the index.html
-![DevCamper Bootcamp gif](./public/devcamper-bootcamp.gif)
+Here is an expected gif of the preview of the App(Pizza Menu Items List)
+
+![Pizza Menu Items List gif](./src/images/pizza-menu-list.gif)
