@@ -243,6 +243,19 @@
       ],
       "price": 18,
       "id": 23
+    },
+    {
+      "title": "Camerin Italian Delight",
+      "description": "A tasty pizza with all toppings",
+      "toppings": [
+        "mushrooms",
+        "peppers",
+        "sweetcorn",
+        "olives",
+        "pineapple"
+      ],
+      "price": 30,
+      "id": 24
     }
   ]
 }
