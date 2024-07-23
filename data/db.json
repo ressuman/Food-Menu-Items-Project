@@ -1,0 +1,261 @@
+{
+  "pizzas": [
+    {
+      "title": "Mario Special",
+      "description": "An extra cheesy pizza on a thin and crispy base, loaded with olives and mushrooms.",
+      "toppings": [
+        "mushrooms",
+        "olives"
+      ],
+      "price": 12,
+      "id": 1
+    },
+    {
+      "title": "Luigi Special",
+      "description": "Peppers and mushrooms on a Luigi-special garlic base, with BBQ sauce instead of the usual tomato.",
+      "toppings": [
+        "mushrooms",
+        "peppers"
+      ],
+      "price": 10,
+      "id": 2
+    },
+    {
+      "title": "Peach's Hawaiian",
+      "description": "A fruity combination of pineapple, sweetcorn, and mushrooms on a light, thin base.",
+      "toppings": [
+        "pineapple",
+        "sweetcorn",
+        "mushrooms"
+      ],
+      "price": 15,
+      "id": 3
+    },
+    {
+      "title": "Toad's Veggie Delight",
+      "description": "A mix of fresh vegetables including tomatoes, bell peppers, onions, and olives on a whole wheat base.",
+      "toppings": [
+        "mushrooms",
+        "peppers",
+        "olives"
+      ],
+      "price": 11,
+      "id": 4
+    },
+    {
+      "title": "Yoshi's Meatless Feast",
+      "description": "A hearty pizza topped with mushrooms, peppers, and olives, perfect for veggie lovers.",
+      "toppings": [
+        "mushrooms",
+        "peppers",
+        "olives"
+      ],
+      "price": 18,
+      "id": 5
+    },
+    {
+      "title": "Bowser's Inferno",
+      "description": "A spicy pizza with peppers and olives on a fiery base.",
+      "toppings": [
+        "peppers",
+        "olives"
+      ],
+      "price": 14,
+      "id": 6
+    },
+    {
+      "title": "Daisy's Garden Fresh",
+      "description": "A light and refreshing pizza with sweetcorn, olives, and mushrooms.",
+      "toppings": [
+        "sweetcorn",
+        "olives",
+        "mushrooms"
+      ],
+      "price": 13,
+      "id": 7
+    },
+    {
+      "title": "Wario's BBQ Delight",
+      "description": "BBQ sauce with sweetcorn, mushrooms, and peppers on a crispy crust.",
+      "toppings": [
+        "sweetcorn",
+        "mushrooms",
+        "peppers"
+      ],
+      "price": 16,
+      "id": 8
+    },
+    {
+      "title": "Koopa's Veggie Feast",
+      "description": "A veggie lover's dream with sweetcorn, olives, and mushrooms on a garlic butter base.",
+      "toppings": [
+        "sweetcorn",
+        "olives",
+        "mushrooms"
+      ],
+      "price": 20,
+      "id": 9
+    },
+    {
+      "title": "Rosalina's Cosmic Veggie",
+      "description": "A cosmic blend of sweetcorn, sun-dried tomatoes, and olives on a pesto base.",
+      "toppings": [
+        "sweetcorn",
+        "mushrooms",
+        "olives"
+      ],
+      "price": 17,
+      "id": 10
+    },
+    {
+      "title": "Donkey Kong's Tropical",
+      "description": "A tropical blend with pineapple, mushrooms, and olives.",
+      "toppings": [
+        "pineapple",
+        "mushrooms",
+        "olives"
+      ],
+      "price": 15,
+      "id": 11
+    },
+    {
+      "title": "Toadette's Special",
+      "description": "A special mix of mushrooms, peppers, and olives on a thin base.",
+      "toppings": [
+        "mushrooms",
+        "peppers",
+        "olives"
+      ],
+      "price": 12,
+      "id": 12
+    },
+    {
+      "title": "King Boo's Ghostly Pizza",
+      "description": "A spooky blend of olives and mushrooms on a ghostly white sauce base.",
+      "toppings": [
+        "olives",
+        "mushrooms"
+      ],
+      "price": 14,
+      "id": 13
+    },
+    {
+      "title": "Waluigi's Wicked Veggie",
+      "description": "A wicked mix of peppers, sweetcorn, and mushrooms.",
+      "toppings": [
+        "peppers",
+        "sweetcorn",
+        "mushrooms"
+      ],
+      "price": 13,
+      "id": 14
+    },
+    {
+      "title": "Birdo's Sweet Surprise",
+      "description": "A sweet surprise of sweetcorn and pineapple on a thin crust.",
+      "toppings": [
+        "sweetcorn",
+        "pineapple"
+      ],
+      "price": 11,
+      "id": 15
+    },
+    {
+      "title": "Shy Guy's Secret Pizza",
+      "description": "A secret blend of mushrooms and olives with a special sauce.",
+      "toppings": [
+        "mushrooms",
+        "olives"
+      ],
+      "price": 15,
+      "id": 16
+    },
+    {
+      "title": "Kamek's Magical Veggie",
+      "description": "A magical mix of mushrooms, olives, and peppers on a crispy crust.",
+      "toppings": [
+        "mushrooms",
+        "olives",
+        "peppers"
+      ],
+      "price": 16,
+      "id": 17
+    },
+    {
+      "title": "Bowser Jr.'s Fiery Pizza",
+      "description": "A fiery blend of peppers and olives on a spicy base.",
+      "toppings": [
+        "peppers",
+        "olives"
+      ],
+      "price": 14,
+      "id": 18
+    },
+    {
+      "title": "Captain Toad's Treasure",
+      "description": "A treasure of mushrooms, olives, and sweetcorn on a garlic butter base.",
+      "toppings": [
+        "mushrooms",
+        "olives",
+        "sweetcorn"
+      ],
+      "price": 17,
+      "id": 19
+    },
+    {
+      "title": "Pauline's Classic Veggie",
+      "description": "A classic mix of mushrooms, peppers, and olives on a tomato base.",
+      "toppings": [
+        "mushrooms",
+        "peppers",
+        "olives"
+      ],
+      "price": 12,
+      "id": 20
+    },
+    {
+      "title": "Bowser Special",
+      "description": "A firey pizza with mushrooms on peppers",
+      "toppings": [
+        "mushrooms",
+        "peppers"
+      ],
+      "price": 20,
+      "id": 21
+    },
+    {
+      "title": "Pellini Special",
+      "description": "A fiesty pizza with peppers and olives",
+      "toppings": [
+        "peppers",
+        "olives"
+      ],
+      "price": 23,
+      "id": 22
+    },
+    {
+      "title": "Cosmeco Special Treat",
+      "description": "A treat with sweetcorn, olives and pineapple",
+      "toppings": [
+        "sweetcorn",
+        "olives",
+        "pineapple"
+      ],
+      "price": 18,
+      "id": 23
+    },
+    {
+      "title": "Camerin Italian Delight",
+      "description": "A tasty pizza with all toppings",
+      "toppings": [
+        "mushrooms",
+        "peppers",
+        "sweetcorn",
+        "olives",
+        "pineapple"
+      ],
+      "price": 30,
+      "id": 24
+    }
+  ]
+}
