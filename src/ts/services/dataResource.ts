@@ -12,6 +12,7 @@ export class DataResource<T> {
       throw error;
     }
   }
+
   async loadOne(id: number): Promise<T> {
     try {
       const res = await axios.get<T>(`${this.endpoint}/${id}`);
