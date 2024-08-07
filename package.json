@@ -2,7 +2,7 @@
   "name": "personal-project-24-typescript-food-items-menu-frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.html",
+  "main": "index.js",
   "scripts": {
     "start": "npx parcel src/index.html",
     "build": "npx parcel build src/index.html --dist-dir dist"
