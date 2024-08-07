@@ -1,5 +1,6 @@
 import { Pizza, PizzaProps } from "./model/Pizza";
 import dotenv from "dotenv";
+import "process/browser";
 
 dotenv.config();
 
