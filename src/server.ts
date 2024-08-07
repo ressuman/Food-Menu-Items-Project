@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.use("api/v1/pizzas", pizzaRoutes);
+app.use("/api/v1/pizzas", pizzaRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

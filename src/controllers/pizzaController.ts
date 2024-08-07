@@ -8,7 +8,9 @@ const isError = (error: unknown): error is Error => {
 export const getPizzas = async (req: Request, res: Response) => {
   try {
     const pizzas = await Pizza.find();
-    res.json(pizzas);
+    res
+      .status(200)
+      .json({ message: "Pizzas retrieved successfully", data: pizzas });
   } catch (error) {
     if (isError(error)) {
       res.status(500).json({ message: error.message });
@@ -24,7 +26,9 @@ export const getPizzaById = async (req: Request, res: Response) => {
     if (!pizza) {
       return res.status(404).json({ message: "Pizza not found" });
     }
-    res.json(pizza);
+    res
+      .status(200)
+      .json({ message: "Pizza retrieved successfully", data: pizza });
   } catch (error) {
     if (isError(error)) {
       res.status(500).json({ message: error.message });
@@ -46,7 +50,9 @@ export const createPizza = async (req: Request, res: Response) => {
 
   try {
     const savedPizza = await newPizza.save();
-    res.status(201).json(savedPizza);
+    res
+      .status(201)
+      .json({ message: "Pizza created successfully", data: savedPizza });
   } catch (error) {
     if (isError(error)) {
       res.status(400).json({ message: error.message });
@@ -69,7 +75,9 @@ export const updatePizza = async (req: Request, res: Response) => {
     if (!updatedPizza) {
       return res.status(404).json({ message: "Pizza not found" });
     }
-    res.json(updatedPizza);
+    res
+      .status(200)
+      .json({ message: "Pizza updated successfully", data: updatedPizza });
   } catch (error) {
     if (isError(error)) {
       res.status(400).json({ message: error.message });
@@ -85,7 +93,7 @@ export const deletePizza = async (req: Request, res: Response) => {
     if (!deletedPizza) {
       return res.status(404).json({ message: "Pizza not found" });
     }
-    res.json({ message: "Pizza deleted successfully" });
+    res.status(200).json({ message: "Pizza deleted successfully" });
   } catch (error) {
     if (isError(error)) {
       res.status(500).json({ message: error.message });

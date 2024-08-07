@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import { Pizza } from "../src/models/pizzaModel";
+import { Pizza } from "./models/pizzaModel";
 
 dotenv.config();
 
@@ -25,15 +25,38 @@ export const connectDB = async () => {
 };
 
 const readJSONFiles = (filePath: string) => {
-  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  } catch (error) {
+    if (isError(error)) {
+      console.error(`Error reading JSON file at ${filePath}: ${error.message}`);
+    } else {
+      console.error("Unknown error while reading JSON file");
+    }
+    process.exit(1);
+  }
+};
+
+const validatePizzaData = (pizzas: any[]) => {
+  return pizzas.every((pizza) => {
+    return pizza.title && pizza.description && pizza.toppings && pizza.price;
+  });
 };
 
 const importData = async () => {
   try {
-    const pizzas = readJSONFiles(path.join(__dirname, "data", "db.json"));
+    const dataPath = path.resolve(__dirname, "../data/db.json");
+    const data = readJSONFiles(dataPath);
+    const pizzas = data.pizzas;
+
+    if (!validatePizzaData(pizzas)) {
+      console.error(
+        "Invalid data format in db.json. Ensure all required fields are present."
+      );
+      process.exit(1);
+    }
 
     await Pizza.create(pizzas);
-
     console.log("Data Imported...");
     process.exit();
   } catch (error) {
@@ -49,7 +72,6 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await Pizza.deleteMany();
-
     console.log("Data Destroyed...");
     process.exit();
   } catch (error) {
@@ -70,11 +92,21 @@ const processData = async () => {
     await deleteData();
   } else {
     console.error(
-      "Invalid command. Usage: node seeder -i (import) | -d (delete)"
+      "Invalid command. Usage: node dist/seeder -i (import) | -d (delete)"
     );
     process.exit(1);
   }
 };
 
-connectDB();
-processData();
+connectDB()
+  .then(processData)
+  .catch((error) => {
+    if (isError(error)) {
+      console.error(
+        `Error in initial connection or processing: ${error.message}`
+      );
+    } else {
+      console.error("Unknown error in initial connection or processing");
+    }
+    process.exit(1);
+  });
