@@ -1,4 +1,7 @@
 import { DataResource } from "../services/dataResource";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export interface PizzaProps {
   title: string;
@@ -8,9 +11,15 @@ export interface PizzaProps {
   id?: number;
 }
 
-export const Pizza = new DataResource<PizzaProps>(
-  "http://localhost:3000/pizzas"
-);
+const pizzaMenuListItemsServer = process.env.PIZZA_MENU_LIST_ITEMS_SERVER;
+
+if (!pizzaMenuListItemsServer) {
+  throw new Error(
+    "PIZZA_MENU_LIST_ITEMS_SERVER is not defined in the environment variables"
+  );
+}
+
+export const Pizza = new DataResource<PizzaProps>(pizzaMenuListItemsServer);
 
 // Pizza.save({
 // 	title: 'my new pizza',

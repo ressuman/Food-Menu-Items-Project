@@ -1,4 +1,7 @@
 import { Pizza, PizzaProps } from "./model/Pizza";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // Form handling code
 document.addEventListener("DOMContentLoaded", () => {
