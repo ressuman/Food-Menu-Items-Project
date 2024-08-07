@@ -15,20 +15,8 @@
       "@parcel/optimizer-terser"
     ]
   },
-  "bundlers": {
-    "*.js": [
-      "@parcel/bundler-default"
-    ]
-  },
-  "namers": [
-    "@parcel/namer-default"
-  ],
-  "resolvers": [
-    "@parcel/resolver-default"
-  ],
-  "runtimes": {
-    "*.js": [
-      "@parcel/runtime-js"
-    ]
-  }
+  "bundler": "@parcel/bundler-default",
+  "runtimes": [
+    "@parcel/runtime-js"
+  ]
 }
