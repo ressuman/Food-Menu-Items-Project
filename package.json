@@ -6,7 +6,6 @@
     "start": "rimraf .parcel-cache && npx parcel src/index.html",
     "build": "rimraf .parcel-cache && npx parcel build src/index.html --dist-dir dist"
   },
-  "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
