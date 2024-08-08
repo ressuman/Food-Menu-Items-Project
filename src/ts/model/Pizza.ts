@@ -1,6 +1,6 @@
 import { DataResource } from "../services/dataResource";
 import dotenv from "dotenv";
-import "process/browser";
+//import "process/browser";
 
 dotenv.config();
 
