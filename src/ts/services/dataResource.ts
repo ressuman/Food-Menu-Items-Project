@@ -1,12 +1,16 @@
 import axios, { AxiosResponse } from "axios";
 
+interface ApiResponse<T> {
+  data: T[];
+}
+
 export class DataResource<T> {
   constructor(private endpoint: string) {}
 
   async loadAll(): Promise<T[]> {
     try {
-      const res = await axios.get<T[]>(this.endpoint);
-      return res.data;
+      const res = await axios.get<ApiResponse<T>>(this.endpoint);
+      return res.data.data;
     } catch (error) {
       console.error("Failed to load all data:", error);
       throw error;

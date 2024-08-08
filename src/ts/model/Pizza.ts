@@ -13,6 +13,7 @@ export interface PizzaProps {
 }
 
 const pizzaMenuListItemsServer = process.env.PIZZA_MENU_LIST_ITEMS_SERVER;
+console.log(pizzaMenuListItemsServer);
 
 if (!pizzaMenuListItemsServer) {
   throw new Error(

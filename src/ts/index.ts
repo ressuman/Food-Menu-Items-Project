@@ -29,15 +29,18 @@ function renderTemplates(templates: string[], parent: Element): void {
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    // load the pizza data
+    // Load the pizza data
     const pizzas = await Pizza.loadAll();
 
-    // create template string for each pizza
+    // Create template string for each pizza
     const pizzaTemplates = pizzas.map(createPizzaTemplate);
 
-    // render pizza templates to DOM
+    // Render pizza templates to DOM
     renderTemplates(pizzaTemplates, rootElement);
   } catch (error) {
     console.error("Error loading pizzas:", error);
+    const errorMessage = document.createElement("p");
+    errorMessage.textContent = "Failed to load pizzas. Please try again later.";
+    rootElement.appendChild(errorMessage);
   }
 });
